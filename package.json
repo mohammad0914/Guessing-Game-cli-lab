@@ -1,0 +1,17 @@
+{
+  "name": "guessing-game",
+  "version": "1.0.0",
+  "description": "command line guessing game lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.1",
+    "readline-sync": "^1.4.10"
+  }
+}
