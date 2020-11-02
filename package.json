@@ -12,6 +12,8 @@
   "dependencies": {
     "@types/jest": "^26.0.15",
     "jest": "^26.6.1",
-    "readline-sync": "^1.4.10"
+    "mock-stdin": "^1.0.0",
+    "readline-sync": "^1.4.10",
+    "rewire": "^5.0.0"
   }
 }
