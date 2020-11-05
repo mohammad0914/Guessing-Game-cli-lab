@@ -29,7 +29,59 @@ Similar to the lesson, you will be building a guessing game. The main difference
 
 ## Technical Requirements
 
-1. Have all of the tests passing before you submit!
+Here's a description of what each function should accomplish. We also suggest you try to read the tests to see what they're looking for specifically.
+
+**startGame()**
+
+* Should run `rls.keyInYN()` which prompts the user to start the game
+  * If `Y` is pressed, console log "Let's start!"
+  * If `Y` is pressed, call `gameLoop()` function
+  * If `N` is pressed, console log "Have a nice life!"
+  * If `N` is pressed, call `quitGame()` function
+* Call `startGame()` at the bottom of `game.js` (before the exports) to kick things off
+
+**quitGame()**
+
+* console log "Goodbye!"
+* call `process.exit()` to terminate the program
+
+**generateRandomNumber()**
+
+* return a whole (rounded) random number between 1 and 1000
+
+**gameLoop()**
+
+* console log "I have a random number in mind"
+* console log "It's between 1 and 1000"
+* console log "You have 10 guesses"
+* Generate a random number and store it in a variable
+* Take an input (guess) from the user using `rls.questionInt()`
+* If the guess is correct, log "Congrats! You got it right!"
+  * Prompt the user if they want to play again
+    * if Y, call `gameLoop()`
+    * if N, call `quitGame()`
+* If the guess is high, log "Your guess is too high"
+* If the guess is low, log "Your guess is too low"
+* Starting with 10, decrease the number of guesses after each attempt
+* If the number of guesses reaches 0, log "You lose!" and call `quitGame()`
+
+
+## Bonus
+
+Look up how to use `process.argv` for these. It will enable you to pass arguments in from the command line to the program.
+
+* Change the `numOfGuesses` variable in `startGame` to be a value passed in from the command line. It should default to 10 if nothing is passed in.
+* Add `min` and `max` parameters to the `generateRandomNumber()` function, which will allow you to specify how wide the range of random numbers is.
+  * Accept min and max values from the command line
+  * Should default to 1 and 1000, respectively
+
+You should be able to run the program like this:
+
+```bash
+$ node game.js 15 100 500 # 15 tries, 100 min, 500 max
+```
+
+
 
 ## Submission Guidelines
 
