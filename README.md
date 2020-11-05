@@ -31,6 +31,8 @@ Similar to the lesson, you will be building a guessing game. The main difference
 
 Here's a description of what each function should accomplish. We also suggest you try to read the tests to see what they're looking for specifically.
 
+> Note: you can pass all the tests in this lab and still not have a working game. This is due to the difficulty of testing console inputs inside loops. Make sure your game works by playing it in the terminal before you submit a pull request.
+
 **startGame()**
 
 * Should run `rls.keyInYN()` which prompts the user to start the game
@@ -68,7 +70,7 @@ Here's a description of what each function should accomplish. We also suggest yo
 
 ## Bonus
 
-Look up how to use `process.argv` for these. It will enable you to pass arguments in from the command line to the program.
+Look up how to use `process.argv` for these (see Resources below). It will enable you to pass arguments in from the command line to the program.
 
 * Change the `numOfGuesses` variable in `startGame` to be a value passed in from the command line. It should default to 10 if nothing is passed in.
 * Add `min` and `max` parameters to the `generateRandomNumber()` function, which will allow you to specify how wide the range of random numbers is.
@@ -81,8 +83,6 @@ You should be able to run the program like this:
 $ node game.js 15 100 500 # 15 tries, 100 min, 500 max
 ```
 
-
-
 ## Submission Guidelines
 
 - Finish the lab
@@ -91,3 +91,6 @@ $ node game.js 15 100 500 # 15 tries, 100 min, 500 max
 - Make a pull request against the main repository 
 
 ## Resources
+
+- [how to parse command line arguments](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/)
+- 

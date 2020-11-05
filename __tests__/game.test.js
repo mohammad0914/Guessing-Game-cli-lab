@@ -9,11 +9,7 @@ const stringifyRemoveComments = (f) => {
 
 describe("startGame", () => {
   let mockConsole = jest.spyOn(global.console, 'log').mockImplementation()
-
   let mockYN
-
-  afterAll(() => {
-  })
 
   afterEach(() => {
     mockYN.mockRestore()
@@ -42,17 +38,12 @@ describe("startGame", () => {
     mockYN = jest.spyOn(rls, 'keyInYN').mockReturnValueOnce(false)
     game.startGame()
     expect(mockConsole).toBeCalledWith("Have a nice life!")
-    // expect(mockExit).toBeCalled()
     expect(stringifyRemoveComments(game.startGame).includes('quitGame()')).toBe(true)
   })
 })
 
 describe("quitGame", () => {
   let mockConsole = jest.spyOn(global.console, 'log').mockImplementation()
-
-  // afterAll(() => {
-  //   mockConsole.mockReset()
-  // })
 
   test("quitGame logs 'Goodbye!'", () => {
     game.quitGame()
@@ -77,11 +68,6 @@ describe("generateRandomNumber", () => {
 
 describe("gameLoop before game starts", () => {
   let mockConsole = jest.spyOn(global.console, 'log').mockImplementation()
-  // let mockGame = jest.spyOn(game, 'gameLoop')
-
-  // afterAll(() => {
-  //   mockConsole.mockReset()
-  // })
 
   game.gameLoop()
   
@@ -115,9 +101,4 @@ describe("gameLoop before game starts", () => {
 //   // test("", () => {
 
 //   // })
-// })
-// describe("", () => {
-//   test("", () => {
-
-//   })
 // })
