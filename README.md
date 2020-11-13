@@ -93,4 +93,3 @@ $ node game.js 15 100 500 # 15 tries, 100 min, 500 max
 ## Resources
 
 - [how to parse command line arguments](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/)
-- 
