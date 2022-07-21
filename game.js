@@ -1,4 +1,12 @@
 const rls = require('readline-sync')
+let numberOfGuess ;
+
+const SetParametre=()=>{
+  let argv=process.argv.slice(2);
+  numberOfGuess =argv[0];
+  console.log(numberOfGuess);
+
+}
 
 /**
  * Starts the game by prompting the user if they want to play
@@ -7,6 +15,7 @@ const rls = require('readline-sync')
  * @returns {undefined}
  */
 const startGame = () => {
+  SetParametre();
   if (rls.keyInYN("Would u like to play?")) {
     console.log("Let's Start.");
     gameLoop();
@@ -42,7 +51,7 @@ const gameLoop = () => {
   console.log("You have 10 guesses");
   let randomNumber = generateRandomNumber();
   console.log(randomNumber);
-  let numberOfGuess = 10;
+  console.log(numberOfGuess);
   while (numberOfGuess > 0) {
     let guess = rls.questionInt();
     if (guess === randomNumber) {
